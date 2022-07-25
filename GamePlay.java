@@ -31,11 +31,6 @@ public class GamePlay extends JPanel implements ActionListener,KeyListener{
 
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
-
     public void keyPressed(KeyEvent e){
         //when right key is pressed
         if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
@@ -79,12 +74,7 @@ public class GamePlay extends JPanel implements ActionListener,KeyListener{
             }
         }
     }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-
-    }
-
+    
     public void moveLeft() {
         play = true;
         player_x -=15;
@@ -149,8 +139,6 @@ public class GamePlay extends JPanel implements ActionListener,KeyListener{
                     }
                 }
             }
-
-
             repaint();
         }
     }
@@ -209,5 +197,13 @@ public class GamePlay extends JPanel implements ActionListener,KeyListener{
             g.setFont(new Font("serif",Font.BOLD, 20));
             g.drawString("Press (Enter) to Restart", 230,350);
         }
+    }
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+    @Override
+    public void keyReleased(KeyEvent e) {
+
     }
 }
